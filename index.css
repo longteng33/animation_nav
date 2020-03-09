@@ -1,0 +1,93 @@
+body,ul,li,a,p{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background: rgba(0, 0, 0, 0.1);
+}
+@font-face{
+    font-family: "webSymbols";
+    src: url(./source/WebSymbols-Regular-2.otf);
+}
+.wrapper{
+    width: 500px;
+    margin: 20px auto 0;
+}
+.wrapper li{
+    width: 100%;
+    margin-bottom: 10px;
+    background: #fff;
+    height: 100px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    transition: all 1s;
+}
+.wrapper li:hover{
+    background: #67e0f3;
+    
+}
+.wrapper a{
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+    color: #000;
+    
+}
+.wrapper .icon{
+    display: inline-block;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    width: 100px;
+    margin-left: 20px;
+    font-family: "webSymbols";
+    transition: all 1s;
+    text-shadow: 0 0 2px #333;
+}
+.wrapper li:hover .icon{
+    color: orange;
+    font-size: 40px;
+    text-shadow: 0 0 2px #fff;
+    
+}
+.wrapper .content{
+    display: inline-block;
+    height: 100%;
+    vertical-align: bottom;
+   
+}
+.wrapper .content .main{
+    font-weight: normal;
+}
+.wrapper li:hover .content .main{
+    animation: moveFromTop 0.3s ease;
+    color: orange;
+}
+.wrapper li:hover .content .dis{
+    animation: moveFromBottom 1s ease;
+    color: orange;
+}
+@keyframes moveFromTop{
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+@keyframes moveFromBottom{
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+
+    }
+}
+
